@@ -1,0 +1,23 @@
+<h2>Edit Item</h2>
+
+<%= form_for [@guide, @item] do |f| %>
+	
+	<p>
+	<%= f.label :name %><br />
+	<%= f.text_field :name %>
+	</p>
+	
+	<p>
+	<%= f.label :address %><br />
+	<%= f.text_field :address %>
+	</p>
+	
+	<p>
+	<%= f.label :description %><br />
+	<%= f.text_area :description %>
+	</p>
+	
+	<p>
+	<%= f.submit "Save Place" %>
+	</p>
+<% end %>

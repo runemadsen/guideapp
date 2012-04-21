@@ -1,0 +1,5 @@
+<h2><%= @guide.title%></h2>
+
+<p><%= @guide.description%></p>
+
+<%= render :partial => "items/list_item", :collection => @guide.items %>
