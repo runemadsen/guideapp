@@ -4,9 +4,12 @@
 		jQuery(document).ready(function() {
 			$('.list-address').each(function() {
 				var t = $(this);
-				t.gmap({"center" : t.attr("data-address"), "zoom" : 15, "disableDefaultUI" : true, "callback" : function() {
-					this.addMarker({'position': this.get('map').getCenter()});
-				}})
+				if(t.attr("data-address") != "")
+				{
+					t.gmap({"center" : t.attr("data-address"), "zoom" : 15, "disableDefaultUI" : true, "callback" : function() {
+						this.addMarker({'position': this.get('map').getCenter()});
+					}});
+				}
 			});
 		});
 	</script>

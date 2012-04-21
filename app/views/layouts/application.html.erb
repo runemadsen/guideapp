@@ -13,13 +13,13 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <div id="container" class="container">
-      <header>
-        <%= render 'layouts/navigation' %>
-        <%- flash.each do |name, msg| -%>
-          <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
-        <%- end -%>
-      </header>
+    <div class="container_10">
+    	<%= render 'layouts/menu' %>
+			
+			<%- flash.each do |name, msg| -%>
+				<%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
+			<%- end -%>
+			
       <div id="main" role="main">
         <%= yield %>
       </div>
