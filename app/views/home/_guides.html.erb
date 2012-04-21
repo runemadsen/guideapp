@@ -1,3 +1,3 @@
 <%= link_to "Create Guide", new_guide_path %>
 
-<%= render :partial => "guides/list_item", :collection => current_user.guides %>
+<%= render :partial => "guides/list_edit", :collection => current_user.guides, :as => :guide %>

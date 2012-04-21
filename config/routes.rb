@@ -9,4 +9,5 @@ Guideapp::Application.routes.draw do
   
   root :to => "home#index"
   devise_for :users
+  resources :guides, :only => [:show]
 end

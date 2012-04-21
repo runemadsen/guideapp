@@ -1,0 +1,7 @@
+<h2><%= @guide.title%></h2>
+
+<p><%= @guide.description%></p>
+
+<p><%= link_to "PRINT THIS GUIDE", "" %></p>
+
+<%= render :partial => "items/list", :collection => @guide.items, :as => :item %>

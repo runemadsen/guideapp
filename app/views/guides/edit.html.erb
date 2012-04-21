@@ -2,4 +2,6 @@
 
 <p><%= @guide.description%></p>
 
-<%= render :partial => "items/list_item", :collection => @guide.items %>
+<p><%= link_to "OFFICIAL LINK TO THIS GUIDE", guide_path(@guide) %></p>
+
+<%= render :partial => "items/list_edit", :collection => @guide.items, :as => :item %>
