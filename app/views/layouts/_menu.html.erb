@@ -1,25 +1,24 @@
-<div class="grid_10" id="menu">
-
-<%= link_to "Home", root_path %>
-<ul class="nav">
-  <% if user_signed_in? %>
-    <li>
-    <%= link_to('Logout', destroy_user_session_path, :method=>'delete') %>        
-    </li>
-  <% else %>
-    <li>
-    <%= link_to('Login', new_user_session_path)  %>  
-    </li>
-  <% end %>
-  <% if user_signed_in? %>
-    <li>
-    <%= link_to('Edit account', edit_user_registration_path) %>
-    </li>
-  <% else %>
-    <li>
-    <%= link_to('Sign up', new_user_registration_path)  %>
-    </li>
-  <% end %>
-</ul>
-
+<div id="menu">
+	<div class="grid_3" id="menu_left">
+		<%= link_to(image_tag("small_logo.jpg"), root_path) %>
+	</div>
+	<div class="grid_7" id="menu_right">
+		<ul>
+		  <% if user_signed_in? %>
+		    <li>
+		    <%= link_to('Profile', edit_user_registration_path) %>
+		    </li>
+				<li>
+		    <%= link_to('Logout', destroy_user_session_path, :method=>'delete') %>        
+		    </li>
+		  <% else %>
+		    <li>
+		    <%= link_to('Login', new_user_session_path)  %>  
+		    </li>
+		  <% end %>
+			<div class="clear"></div>
+		</ul>
+		<div class="clear"></div>
+	</div>
+	<div class="clear"></div>
 </div>

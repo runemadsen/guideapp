@@ -1,3 +1,67 @@
+body {
+	font-family: Helvetica, sans-serif;
+}
+
+/* Menu
+------------------------------------------- */
+
+#menu {
+	margin-bottom: 50px;
+}
+
+#menu_right ul {
+	float: right;
+}
+
+#menu_right ul li {
+	float: left;
+	font-size: 16px;
+	background-color: #0a5ca1;
+	padding: 10px 15px;
+}
+
+#menu_right ul li:nth-child(odd) {
+	background-color: #0e3553;
+}
+
+#menu_right ul li a {
+	color: #FFF;
+	text-decoration: none;
+}
+
+/* Text
+------------------------------------------- */
+
+p {
+	margin-bottom: 10px;
+}
+
+/* Buttons
+------------------------------------------- */
+
+a.btn {
+	display: inline-block;
+	padding: 10px 15px;
+	background-color: #0a5ca1;
+	color: #FFF;
+	text-decoration: none;
+}
+
+a.btn.big {
+	font-size: 22px;
+}
+
+/* Splash
+------------------------------------------- */
+
+.biggie {
+	font-size: 36px;
+	line-height: 38px;
+	color: #212121;
+	margin-bottom: 30px;
+}
+
+
 .list-item, .list-guide {
 	padding: 10px;
 	background-color: #E3E3E3;
