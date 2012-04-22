@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Page Pope</title>
+		<%= stylesheet_link_tag "reset", :media => "all" %>
+		<%= stylesheet_link_tag "960", :media => "all" %>
+		<%= stylesheet_link_tag "print", :media => "all" %>
+		<%= javascript_include_tag "jquery" %>
+		<%= javascript_include_tag "jquery.ui.map" %>
+		<script type="text/javascript" src='http://maps.google.com/maps/api/js?sensor=false'></script>
+		<script type="text/javascript">	
+			jQuery(document).ready(function() {
+				$('.list-address').each(function() {
+					var t = $(this);
+						t.gmap({"center" : t.attr("data-address"), "zoom" : 15, "disableDefaultUI" : true, "zoomControl" : true, "callback" : function() {
+							this.addMarker({'position': this.get('map').getCenter()});
+						}});
+				});
+			});
+		</script>
+	</head>
+	<body>
+
+<h2><%= @guide.title%></h2>
+
+<p><%= @guide.description%></p>
+
+<%= render :partial => "items/item_print", :collection => @guide.items, :as => :item %>
+<div class="clear"></div>
+
+</body>
+</html>

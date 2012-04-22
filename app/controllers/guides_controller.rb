@@ -1,5 +1,7 @@
 class GuidesController < ApplicationController
   
+  before_filter :authenticate_user!, :only => [:new, :create, :edit]
+  
   def new
     @guide = current_user.guides.build
   end

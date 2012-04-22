@@ -4,21 +4,23 @@
 		jQuery(document).ready(function() {
 			$('.list-address').each(function() {
 				var t = $(this);
-				if(t.attr("data-address") != "")
-				{
-					t.gmap({"center" : t.attr("data-address"), "zoom" : 15, "disableDefaultUI" : true, "callback" : function() {
-						this.addMarker({'position': this.get('map').getCenter()});
-					}});
-				}
+				t.gmap({"center" : t.attr("data-address"), "zoom" : 15, "disableDefaultUI" : true, "zoomControl" : true, "callback" : function() {
+					this.addMarker({'position': this.get('map').getCenter()});
+				}});
 			});
 		});
 	</script>
 <% end %>
 
-<h2><%= @guide.title%></h2>
+<div class="grid_10">
 
-<p><%= @guide.description%></p>
+	<div id="guide-header">
+		<h2><%= @guide.title%></h2>
+		<p><%= @guide.description%> By <%= @guide.user.name %></p>
+	</div>
+	
 
-<p><%= link_to "PRINT THIS GUIDE", "" %></p>
+	<%= render :partial => "items/item", :collection => @guide.items, :as => :item %>
+	<div class="clear"></div>
 
-<%= render :partial => "items/list", :collection => @guide.items, :as => :item %>
+</div>

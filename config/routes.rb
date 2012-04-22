@@ -1,13 +1,10 @@
 Guideapp::Application.routes.draw do
   
-  authenticated :user do
-    root :to => 'home#index'
-    resources :guides do
-      resources :items
-    end
+  resources :guides do
+    resources :items
   end
   
-  root :to => "home#index"
+  root :to => 'home#index'
+
   devise_for :users
-  resources :guides, :only => [:show]
 end

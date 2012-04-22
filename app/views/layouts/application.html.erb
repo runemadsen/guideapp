@@ -2,12 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page Pope</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= stylesheet_link_tag "application", :media => "all" %>
+		<%= stylesheet_link_tag "print", :media => "print" %>
     <%= javascript_include_tag "application" %>
 		<%= yield :head_extras %>
     <%= csrf_meta_tags %>
@@ -15,16 +12,10 @@
   <body>
     <div class="container_10">
     	<%= render 'layouts/menu' %>
-			
 			<%- flash.each do |name, msg| -%>
 				<%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
 			<%- end -%>
-			
-      <div id="main" role="main">
-        <%= yield %>
-      </div>
-      <footer>
-      </footer>
-    </div> <!--! end of #container -->
+			<%= yield %>
+    </div>
   </body>
 </html>
