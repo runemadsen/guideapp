@@ -8,4 +8,9 @@ class Item < ActiveRecord::Base
   def lon
     address ? address.split(",").last : ""
   end
+  
+  def filled?
+    not name.nil?
+  end
+  
 end

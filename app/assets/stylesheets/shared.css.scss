@@ -1,5 +1,6 @@
 body {
-	font-family: Helvetica, sans-serif;
+	font-family: Helvetica, Arial, sans-serif;
+	padding-bottom: 30px;
 }
 
 /* Menu
@@ -16,24 +17,67 @@ body {
 #menu_right ul li {
 	float: left;
 	font-size: 16px;
-	background-color: #0a5ca1;
+	background-color: #0e3553;
 	padding: 10px 15px;
 }
 
 #menu_right ul li:nth-child(odd) {
-	background-color: #0e3553;
+	background-color: #0a5ca1;
 }
 
 #menu_right ul li a {
 	color: #FFF;
-	text-decoration: none;
+	border: none;
 }
 
-/* Text
+/* Fonts
 ------------------------------------------- */
+
+h1, h2, h3, h4 {
+	color: #232323;
+}
+
+h2 {
+	font-size: 26px;
+	line-height: 40px;
+}
 
 p {
 	margin-bottom: 10px;
+}
+
+a {
+	color: #0a5ca1;
+	text-decoration: none;
+	border-bottom: 1px solid #0a5ca1;
+}
+
+/* Form
+------------------------------------------- */
+
+label {
+	display: block;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	color: #232323;
+}
+
+input[type="text"], input[type="password"], input[type="email"] {
+	width: 270px;
+	padding: 7px 10px;
+	border: 1px solid #BEBEBE;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 16px;
+}
+
+textarea {
+	padding: 7px 10px;
+	border: 1px solid #BEBEBE;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	resize: none;
+	width: 270px;
+	height: 100px;
 }
 
 /* Buttons
@@ -47,8 +91,35 @@ a.btn {
 	text-decoration: none;
 }
 
+input[type="submit"].btn {
+	display: inline-block;
+	padding: 10px 15px;
+	background-color: #0a5ca1;
+	color: #FFF;
+	border: none;
+}
+
 a.btn.big {
 	font-size: 22px;
+}
+
+/* List Items
+------------------------------------------- */
+
+.list-item {
+	padding: 15px 20px;
+	background-color: #d9d9d9;
+}
+
+.list-item:nth-child(even) {
+	background-color: #f0f0f0;
+}
+
+/* Classes
+------------------------------------------- */
+
+.inline {
+	display: inline;
 }
 
 /* Splash
@@ -56,20 +127,7 @@ a.btn.big {
 
 .biggie {
 	font-size: 36px;
-	line-height: 38px;
+	line-height: 40px;
 	color: #212121;
 	margin-bottom: 30px;
-}
-
-
-.list-item, .list-guide {
-	padding: 10px;
-	background-color: #E3E3E3;
-	margin-bottom: 10px;
-}
-
-.list-address {
-	width: 200px;
-	height: 200px;
-	background-color: gray;
 }

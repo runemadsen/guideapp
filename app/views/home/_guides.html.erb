@@ -1,3 +1,8 @@
-<%= link_to "Create Guide", new_guide_path %>
-
-<%= render :partial => "guides/list_edit", :collection => current_user.guides, :as => :guide %>
+<div class="grid_6">
+	<h2>Your Guides</h2>
+	<%= link_to "Create New Guide", new_guide_path, :class => "btn big", :id => "create_guide" %>
+	<%= render :partial => "guides/list_edit", :collection => current_user.guides, :as => :guide %>
+</div>
+<div class="grid_4">
+	
+</div>

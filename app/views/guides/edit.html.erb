@@ -1,7 +1,13 @@
-<h2><%= @guide.title%></h2>
+<div class="grid_10">
 
-<p><%= @guide.description%></p>
+	<h2><%= @guide.title%></h2>
 
-<p><%= link_to "OFFICIAL LINK TO THIS GUIDE", guide_path(@guide) %></p>
+	<p><%= @guide.description%></p>
 
-<%= render :partial => "items/list_edit", :collection => @guide.items, :as => :item %>
+	<p><%= link_to "OFFICIAL LINK TO THIS GUIDE", guide_path(@guide) %></p>
+
+	<%= render :partial => "items/list_edit", :collection => @guide.items, :as => :item %>
+	
+	<div class="clear"></div>
+
+</div>

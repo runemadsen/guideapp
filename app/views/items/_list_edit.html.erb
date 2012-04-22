@@ -1,4 +1,10 @@
-<div class="list-item">
-	<%= item.name %>
-	<%= link_to "Edit", edit_guide_item_path(@guide, item) %>
-</div>
+<% if item.filled? %>
+	<div class="guide-item <%= item_bg_class(item_counter) %>">
+		<%= item.name %>
+		<%= link_to "Edit", edit_guide_item_path(@guide, item) %>
+	</div>
+<% else %>
+	<div class="guide-item <%= item_bg_class(item_counter) %> empty">
+		<%= link_to "Add a Place", edit_guide_item_path(@guide, item) %>
+	</div>
+<% end %>
