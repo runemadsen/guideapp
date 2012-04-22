@@ -1,8 +1,43 @@
 .guide-item {
+	position: relative;
 	background-color: #e7e7e7;
 	float: left;
 	width: 195px;
 	height: 260px;
+}
+
+.guide-item h3 {
+	margin-top: 15px;
+	padding: 0px 5px;
+	font-size: 14px;
+	margin-bottom: 5px;
+	text-align: center;
+}
+
+.guide-item address {
+	padding: 0px 5px;
+	font-size: 13px;
+	text-align: center;
+}
+
+.guide-item p.description {
+	font-size: 15px;
+	margin-top: 10px;
+	padding: 0px 15px;
+	line-height: 17px;
+}
+
+a.edit-guide-item {
+	position: absolute;
+	bottom: 0px;
+	width: 165px;
+	font-size: 13px;
+	text-align: center;
+	border: none;
+}
+
+.guide-item.darker a.edit-guide-item {
+	background-color: #d72121;
 }
 
 .guide-item.darker {
@@ -10,8 +45,8 @@
 }
 
 .guide-item .list-address {
-	width: 200px;
-	height: 200px;
+	width: 195px;
+	height: 195px;
 	background-color: gray;
 }
 

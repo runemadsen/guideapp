@@ -1,7 +1,9 @@
 <% if item.filled? %>
 	<div class="guide-item <%= item_bg_class(item_counter) %>">
-		<%= item.name %>
-		<%= link_to "Edit", edit_guide_item_path(@guide, item) %>
+		<h3><%= item.name %></h3>
+		<address><%= item.address %></address>
+		<p class="description"><%= item.description %></p>
+		<%= link_to "Edit", edit_guide_item_path(@guide, item), :class => "btn edit-guide-item" %>
 	</div>
 <% else %>
 	<div class="guide-item <%= item_bg_class(item_counter) %> empty">
