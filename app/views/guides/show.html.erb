@@ -18,7 +18,6 @@
 		<h2><%= @guide.title%></h2>
 		<p><%= @guide.description%> By <%= @guide.user.name %></p>
 	</div>
-	
 
 	<%= render :partial => "items/item", :collection => @guide.items, :as => :item %>
 	<div class="clear"></div>

@@ -1,12 +1,11 @@
-<% if item.filled? %>
-	<div class="guide-item <%= item_bg_class(item_counter) %>">
+<div class="grid_5 guide-item <%= alpha_or_omega(item_counter) %>">
+	<% if item.filled? %>
 		<h3><%= item.name %></h3>
 		<address><%= item.address %></address>
+		<div class="list-address" data-address="<%= item.address %>"></div>
 		<p class="description"><%= item.description %></p>
 		<%= link_to "Edit", edit_guide_item_path(@guide, item), :class => "btn edit-guide-item" %>
-	</div>
-<% else %>
-	<div class="guide-item <%= item_bg_class(item_counter) %> empty">
-		<%= link_to "Add a Place", edit_guide_item_path(@guide, item) %>
-	</div>
-<% end %>
+	<% else %>
+		<p class="empty"><%= link_to "Add a Place", edit_guide_item_path(@guide, item) %></p>
+	<% end %>
+</div>
