@@ -2,7 +2,7 @@
 	<% if item.filled? %>
 		<h3><%= item.name %></h3>
 		<address><%= item.address %></address>
-		<div class="list-address" data-address="<%= item.address %>"></div>
+		<div class="list-address" data-latlon="<%= item.latlon %>"></div>
 		<p class="description"><%= item.description %></p>
 	<% else %>
 		<p class="empty">

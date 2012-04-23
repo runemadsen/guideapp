@@ -4,7 +4,8 @@
 	    jQuery(document).ready(function(){
 	        jQuery('input.location-picker').locationPicker({
 						width: "400px",
-						height: "400px"
+						height: "400px",
+						insertInto: "#item_latlon"
 					});
 	    });
 	</script>
@@ -20,8 +21,9 @@
 	</p>
 	
 	<p>
-	<%= f.label :address, "Address (will be converted to lat,lon on search)" %><br />
+	<%= f.label :address, "Input address and click 'search'. Make sure the map is displaying the correct address." %><br />
 	<%= f.text_field :address, :class => "location-picker" %>
+	<%= f.hidden_field :latlon %>
 	</p>
 	
 	<p>Max 270 characters<br />

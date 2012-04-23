@@ -13,8 +13,9 @@ class ItemsController < ApplicationController
     @item.name = params[:item][:name]
     @item.description = params[:item][:description]
     @item.address = params[:item][:address]
+    @item.latlon = params[:item][:latlon]
     @item.save
-    redirect_to edit_guide_path(@item.guide)
+    redirect_to guide_path(@item.guide)
   end
   
 end

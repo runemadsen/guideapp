@@ -2,6 +2,14 @@
 	display: none;
 }
 
-h2 {
-	font-size: 14px;
+#guide-header h2 {
+	font-size: 30px;
+}
+
+.printhide {
+	display: none;
+}
+
+.guide-item a.edit-guide-link {
+	display: none;
 }

@@ -12,8 +12,8 @@ class GuidesController < ApplicationController
     @guide.title = params[:guide][:title]
     @guide.description = params[:guide][:description]
     @guide.save
-    # create 8 empty items in guide
-    @guide.items.create([{}, {}, {}, {}, {}, {}, {}, {}])
+    # create 6 empty items in guide
+    @guide.items.create([{}, {}, {}, {}, {}, {}])
     redirect_to guide_path(@guide)
   end
   

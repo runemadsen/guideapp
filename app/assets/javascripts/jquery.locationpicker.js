@@ -8,7 +8,7 @@
     $.fn.extend({ 
         
         //This is where you write your plugin's name
-        locationPicker: function() {
+        locationPicker: function(customOptions) {
             
             var options = {
                 width: "300px",
@@ -20,6 +20,20 @@
                 defaultLat: 51.500152,
                 defaultLng: -0.126236            
             };
+
+						$.extend(options, customOptions);
+						
+						function getUpdateElement()
+						{
+							if(options.insertInto)
+							{
+								return options.insertInto;
+							}
+							else
+							{
+								return that;
+							}
+						}
             
             function RoundDecimal(num, decimals){
                 var mag = Math.pow(10, decimals);
@@ -28,11 +42,6 @@
             
             var geocoder = new google.maps.Geocoder();
             
-            //var mapsScript = document.createElement( 'script' );
-            //mapsScript.type = 'text/javascript';
-            //mapsScript.src = "http://maps.google.com/maps/api/js?sensor=false&callback=lptoremove";
-            //$(this).before( mapsScript );
-
             //Iterate over the current set of matched elements
             return this.each(function() {
                 
@@ -48,7 +57,8 @@
                     }else{
                         map.panTo(latLng);
                     }
-                    $(that).val(lat + "," + lng);
+										
+										$(getUpdateElement()).val(lat + "," + lng);
                 }
                 
                 var id = $(this).attr('id');
@@ -98,7 +108,9 @@
                 });
                 
                 function getCurrentPosition(){
-                    var posStr = $(that).val();
+                    
+										var posStr = $(getUpdateElement()).val();
+										 
                     if(posStr != ""){
                         var posArr = posStr.split(",");
                         if(posArr.length == 2){
@@ -108,7 +120,7 @@
                             setPosition(latlng);
                             return;
                         }
-                        $(that).val("Invalid Position");
+                        $(getUpdateElement()).val("Invalid Position");
                     }
                     
                 }
@@ -121,7 +133,7 @@
                 }
                 
                 $(this).focus(function(){
-                    var address = $(that).val();
+                    var address = $(getUpdateElement()).val();
                     if(isLngLat(address)){
                         showPicker();
                     }

@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(:version => 20120421193144) do
 
   create_table "items", :force => true do |t|
     t.string   "address"
+    t.string   "latlon"
     t.string   "description"
     t.string   "name"
     t.integer  "guide_id"
