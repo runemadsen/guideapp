@@ -24,8 +24,10 @@
 }
 
 .guide-item address {
-	font-size: 13px;
-	margin-bottom: 5px;
+	font-size: 14px;
+	margin-bottom: 7px;
+	color: #275379;
+	font-style: normal;
 }
 
 .guide-item p.empty {
@@ -43,7 +45,7 @@
 }
 
 .guide-item p.description {
-	font-size: 15px;
+	font-size: 14px;
 	margin-top: 10px;
 	line-height: 17px;
 }
@@ -53,3 +55,20 @@
 	height: 195px;
 	background-color: gray;
 }
+
+.guide-item a.edit-guide-link {
+	font-size: 14px;
+	width: 40px;
+	position: absolute;
+	top: 44px;
+	text-align: center;
+}
+
+.guide-item.alpha a.edit-guide-link {
+	left: -70px;
+}
+
+.guide-item.omega a.edit-guide-link {
+	right: -70px;
+}
+
