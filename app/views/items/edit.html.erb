@@ -7,6 +7,8 @@
 						height: "400px",
 						insertInto: "#item_latlon"
 					});
+					
+					$("#item_description").counter({ goal : 270, insert : "#countdown"}).focus();
 	    });
 	</script>
 <% end %>
@@ -29,7 +31,7 @@
 	</p>
 	
 	<p>
-	<%= f.label :description, "Description (Max 270 Characters)" %>
+	<%= f.label :description, "Description (<span id='countdown'></span> characters left)".html_safe %>
 	<%= f.text_area :description %>
 	</p>
 	

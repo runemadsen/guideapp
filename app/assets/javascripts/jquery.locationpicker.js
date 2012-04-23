@@ -85,7 +85,7 @@
                 var myOptions = {
                     zoom: 30,
                     center: myLatlng,
-                    mapTypeId: google.maps.MapTypeId.HYBRID,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP,
                     mapTypeControl: false,
                     disableDoubleClickZoom: true,
                     streetViewControl: false
