@@ -1,3 +1,11 @@
+<% content_for :head_extras do %>
+	<script type="text/javascript">	
+		jQuery(document).ready(function() {
+			$("#guide_description").counter({ goal : 200, insert : "#countdown"}).focus();
+		});
+	</script>
+<% end %>
+
 <div class="grid_6">
 	<h2>Create Guide</h2>
 
@@ -9,7 +17,7 @@
 		</p>
 	
 		<p>
-		<%= f.label :description %>
+		<%= f.label :description, "Description (<span id='countdown'></span> characters left)".html_safe %>
 		<%= f.text_area :description %>
 		</p>
 	
