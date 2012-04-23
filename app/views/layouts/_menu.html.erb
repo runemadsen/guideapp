@@ -18,6 +18,12 @@
 		  <% end %>
 			<div class="clear"></div>
 		</ul>
+		<% if @show_print %>
+			<div id="print-guide">
+			This is a personal guide that fits on a single printed page. <a href="#" onClick="window.print(); return false;">Print it</a>
+			</div>
+		<% end %>
+		
 		<div class="clear"></div>
 	</div>
 	<div class="clear"></div>

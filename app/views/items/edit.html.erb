@@ -11,27 +11,31 @@
 	</script>
 <% end %>
 
+<div class="grid_10">
+
 <h2>Edit Item</h2>
 
 <%= form_for [@guide, @item] do |f| %>
 	
-	<p>Max some other characters
-	<%= f.label :name %><br />
+	<p>
+	<%= f.label :name, "Name (Max ? Characters)" %>
 	<%= f.text_field :name %>
 	</p>
 	
 	<p>
-	<%= f.label :address, "Input address and click 'search'. Make sure the map is displaying the correct address." %><br />
+	<%= f.label :address, "Input address and click 'search'. Make sure the map is displaying the correct address." %>
 	<%= f.text_field :address, :class => "location-picker" %>
 	<%= f.hidden_field :latlon %>
 	</p>
 	
-	<p>Max 270 characters<br />
-	<%= f.label :description %><br />
+	<p>
+	<%= f.label :description, "Description (Max 270 Characters)" %>
 	<%= f.text_area :description %>
 	</p>
 	
 	<p>
-	<%= f.submit "Save Place" %>
+	<%= f.submit "Save Place", :class => "btn" %>
 	</p>
 <% end %>
+
+</div>

@@ -17,7 +17,7 @@
 
 	<div id="guide-header">
 		<h2><%= @guide.title%></h2>
-		<p><%= @guide.description%> By <%= @guide.user.name %></p>
+		<p class="description"><%= @guide.description%> By <%= @guide.user.name %></p>
 		<% if @guide.belongs_to?(current_user) %>
 			<%= link_to "Edit", edit_guide_path(@guide), :class => "printhide" %>
 		<% end %>

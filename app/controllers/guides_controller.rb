@@ -31,6 +31,7 @@ class GuidesController < ApplicationController
   
   def show
     @guide = Guide.find(params[:id])
+    @show_print = true#!@guide.belongs_to?(current_user)
   end
   
 end

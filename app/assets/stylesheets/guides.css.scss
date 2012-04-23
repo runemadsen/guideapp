@@ -1,3 +1,10 @@
+.guide-item {
+	position: relative;
+	float: left;
+	height: 330px;
+	margin-bottom: 30px;
+}
+
 #guide-header {
 	margin-bottom: 20px;
 	padding-bottom: 10px;
@@ -9,13 +16,6 @@
 	color: #0b5ba0;
 	letter-spacing: -1px;
 	margin-bottom: 10px;
-}
-
-.guide-item {
-	position: relative;
-	float: left;
-	height: 350px;
-	margin-bottom: 20px;
 }
 
 .guide-item h3 {

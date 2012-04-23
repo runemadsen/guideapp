@@ -2,8 +2,38 @@
 	display: none;
 }
 
+.guide-item {
+	margin-bottom: 0pt;
+}
+
+#guide-header {
+	margin-bottom: 0pt;
+	padding-bottom: 0pt;
+	border-bottom: 1px dotted #D5D5D5;
+	border-bottom: none;
+}
+
 #guide-header h2 {
-	font-size: 30px;
+	margin-top: 0pt;
+	margin-bottom: 2pt;
+	font-size: 15pt;
+	line-height: 15pt;
+}
+
+#guide-header .description {
+	font-size: 11pt;
+}
+
+.guide-item p.description {
+	font-size: 10pt;
+	margin-top: 2pt;
+	line-height: 12pt;
+	margin-bottom: 0pt;
+}
+
+.guide-item address {
+	margin-bottom: 3pt;
+	color: black;
 }
 
 .printhide {
