@@ -1,6 +1,6 @@
 class GuidesController < ApplicationController
   
-  before_filter :authenticate_user!, :only => [:new, :create, :edit]
+  before_filter :authenticate_user!, :only => [:new, :create, :edit, :update]
   
   def new
     @guide = current_user.guides.build
@@ -18,7 +18,7 @@ class GuidesController < ApplicationController
   end
   
   def update
-    @guide = Guide.find(params[:id])
+    @guide = current_user.guides.find(params[:id])
     @guide.title = params[:guide][:title]
     @guide.description = params[:guide][:description]
     @guide.save
@@ -26,7 +26,7 @@ class GuidesController < ApplicationController
   end
   
   def edit
-    @guide = Guide.find(params[:id])
+    @guide = current_user.guides.find(params[:id])
   end
   
   def show
