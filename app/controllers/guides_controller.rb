@@ -14,7 +14,15 @@ class GuidesController < ApplicationController
     @guide.save
     # create 8 empty items in guide
     @guide.items.create([{}, {}, {}, {}, {}, {}, {}, {}])
-    redirect_to edit_guide_path(@guide)
+    redirect_to guide_path(@guide)
+  end
+  
+  def update
+    @guide = Guide.find(params[:id])
+    @guide.title = params[:guide][:title]
+    @guide.description = params[:guide][:description]
+    @guide.save
+    redirect_to guide_path(@guide)
   end
   
   def edit

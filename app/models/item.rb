@@ -13,4 +13,8 @@ class Item < ActiveRecord::Base
     not name.nil?
   end
   
+  def belongs_to?(logged_in_user)
+    logged_in_user == guide.user
+  end
+  
 end

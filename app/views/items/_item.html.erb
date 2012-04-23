@@ -4,6 +4,9 @@
 		<address><%= item.address %></address>
 		<div class="list-address" data-address="<%= item.address %>"></div>
 		<p class="description"><%= item.description %></p>
+		<% if item.belongs_to?(current_user) %>
+			<%= link_to "Edit", edit_guide_item_path(@guide, item), :class => "btn edit-guide-item" %>
+		<% end %>
 	<% else %>
 		<p class="empty">The <%= (item_counter + 1).ordinalize %> place has not been added yet</p>
 	<% end %>
