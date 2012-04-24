@@ -1,4 +1,9 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
-<p>User: <%= @user.name %></p>
-<p>Email: <%= @user.email if @user.email %></p>
+<div class="grid_4">
+	<h2><%= @user.name %></h2>
+	<p><%= @user.name %> has written <%= @user.guides.count %> guides.</p>
+	
+</div>
+<div class="grid_6">
+	<h2>Guides</h2>
+	<%= render :partial => "guides/public_guide", :collection => @user.guides, :as => :guide %>
+</div>
