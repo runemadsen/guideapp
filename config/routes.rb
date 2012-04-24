@@ -4,6 +4,8 @@ Guideapp::Application.routes.draw do
     resources :items
   end
   
+  match "/admin" => "admin#index"
+  
   root :to => 'home#index'
 
   devise_for :users
