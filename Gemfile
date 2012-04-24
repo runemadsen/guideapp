@@ -17,3 +17,4 @@ end
 
 gem 'jquery-rails'
 gem "devise", ">= 2.1.0.rc"
+gem 'newrelic_rpm'
