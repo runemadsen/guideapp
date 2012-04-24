@@ -5,12 +5,22 @@
 	text-align: center;
 }
 
-.list-guide {
+.list-guide, .list-guide-public {
 	padding: 10px 0px;
 	border-bottom: 1px dotted #D5D5D5;
 }
 
-.list-guide a {
+.list-guide a, .list-guide-public a {
 	border: none;
 	font-size: 18px;
+}
+
+.list-guide-public a {
+	font-size: 16px;
+}
+
+.list-guide-public span.user {
+	display: block;
+	font-size: 13px;
+	margin-top: 5px;
 }

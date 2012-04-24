@@ -3,20 +3,8 @@
 	<%= link_to "Create New Guide", new_guide_path, :class => "btn big", :id => "create_guide" %>
 	<%= render :partial => "guides/guide", :collection => current_user.guides, :as => :guide %>
 </div>
-<div class="grid_4" id="about">
+<div class="grid_4">
 	
-	<h2>Hello There!</h2>
-	
-	<p>I created PagePope because I couldn't find a service that allowed me to store my favorite places in a city, and share them easily with my friends and family. When it comes to recommendations on where to eat or shop, I don't want an average review from every person in the world, like Yelp provides. I want the opposite: personal recommendations from my closes friends.</p>
-	
-	<p>A guide can only hold 6 recommendations. This is because I like short guides. It's also because each guide will fit on a single printed A4 paper, which means you can bring it with you when you travel. Yes, I know that the iPhone exists, but there are cases where your data plan won't work - for example if you're traveling from .... hmmmmm .... Europe.</p>
-	
-	<p>All guides are public, so you can share them on Facebook or Twitter. If you're looking for inspiration, I added my thoughts on <%= link_to "my favorite burger joints in NYC", guide_path(1) %>, and the <%= link_to "best free views of the NYC skyline", guide_path(2) %>.</p>
-	
-	<p>I hope you enjoy the site. If you have requests for features, please let me know on rune at runemadsen dot com. I'll keep adding features, so make sure to tell me what I need to work on.</p>
-	
-	<p>Rune Madsen</p>
-		
-	
-	
+	<h2>Newest Guides</h2>
+	<%= render :partial => "guides/public_guide", :collection => @guides, :as => :guide %>
 </div>

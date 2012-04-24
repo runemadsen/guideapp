@@ -4,6 +4,7 @@ Guideapp::Application.routes.draw do
     resources :items
   end
   
+  match "/about" => "home#about"
   match "/admin" => "admin#index"
   
   root :to => 'home#index'
