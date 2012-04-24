@@ -20,18 +20,20 @@
 <%= form_for [@guide, @item] do |f| %>
 	
 	<p>
-	<%= f.label :name, "Name (Max ? Characters)" %>
+	<%= f.label :name, "Name" %>
 	<%= f.text_field :name %>
 	</p>
 	
 	<p>
-	<%= f.label :address, "Input address and click 'search'. Make sure the map is displaying the correct address." %>
+	<%= f.label :address, "Address" %>
+	<span class="help-text">After inputting the address, please click "search" and make sure the map shows the right place</span>
 	<%= f.text_field :address, :class => "location-picker" %>
 	<%= f.hidden_field :latlon %>
 	</p>
 	
 	<p>
-	<%= f.label :description, "Description (<span id='countdown'></span> characters left)".html_safe %>
+	<%= f.label :description, "Description" %>
+	<span class="help-text"><span id='countdown'></span> characters left</span>
 	<%= f.text_area :description %>
 	</p>
 	

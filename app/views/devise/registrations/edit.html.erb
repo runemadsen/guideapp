@@ -16,7 +16,8 @@
 	</p>
 
   <p>
-	<%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+	<%= f.label :password %>
+	<span class="help-text">Leave blank if you don't want to change it</span>
   <%= f.password_field :password, :autocomplete => "off" %>
 	</p>
 
@@ -26,7 +27,8 @@
 	</p>
 
   <p>
-	<%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+	<%= f.label :current_password %>
+	<span class="help-text">We need your current password to confirm your changes</span>
   <%= f.password_field :current_password %>
 	</p>
 
