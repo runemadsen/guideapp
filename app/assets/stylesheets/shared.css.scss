@@ -80,6 +80,11 @@ textarea {
 	height: 100px;
 }
 
+p.spacing {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
 /* Buttons
 ------------------------------------------- */
 
@@ -157,10 +162,6 @@ a.btn.big {
 	color: #FFF;
 	border-bottom: 2px solid #FFF;
 	font-weight: bold;
-}
-
-#countdown {
-	color: #5686A1;
 }
 
 #about p {

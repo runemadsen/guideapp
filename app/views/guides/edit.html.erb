@@ -11,18 +11,19 @@
 
 	<%= form_for @guide do |f| %>
 	
-		<p>
+		<p class="spacing">
 		<%= f.label :title %>
+		<span class="help-text">Not too long. Something like "Best hotdogs in Michigan"</span>
 		<%= f.text_field :title %>
 		</p>
 	
-		<p>
+		<p class="spacing">
 		<%= f.label :description, "Description" %>
-		<span class="help-text"><span id='countdown'></span> characters left</span>
+		<span class="help-text">Say what this guide is about in less than <span id='countdown'></span> characters.</span>
 		<%= f.text_area :description %>
 		</p>
 	
-		<p>
+		<p class="spacing">
 		<%= f.submit "Save Changes", :class => "btn" %>
 		</p>
 	<% end %>

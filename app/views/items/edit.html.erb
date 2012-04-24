@@ -15,25 +15,26 @@
 
 <div class="grid_10">
 
-<h2>Edit Item</h2>
+<h2>Edit Place</h2>
 
 <%= form_for [@guide, @item] do |f| %>
 	
 	<p>
 	<%= f.label :name, "Name" %>
+	<span class="help-text">What is this place called?</span>
 	<%= f.text_field :name %>
 	</p>
 	
 	<p>
 	<%= f.label :address, "Address" %>
-	<span class="help-text">After inputting the address, please click "search" and make sure the map shows the right place</span>
+	<span class="help-text">Please click "search" afterwards and check the map</span>
 	<%= f.text_field :address, :class => "location-picker" %>
 	<%= f.hidden_field :latlon %>
 	</p>
 	
 	<p>
 	<%= f.label :description, "Description" %>
-	<span class="help-text"><span id='countdown'></span> characters left</span>
+	<span class="help-text">Say why you like this place in less than <span id='countdown'></span> characters</span>
 	<%= f.text_area :description %>
 	</p>
 	
