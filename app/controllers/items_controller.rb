@@ -11,8 +11,13 @@ class ItemsController < ApplicationController
     @guide = current_user.guides.find(params[:guide_id])
     @item = @guide.items.find(params[:id])
     @item.name = params[:item][:name]
+    
+    if params[:item][:name] == ""
+      @item.name = nil
+    end
+    
     @item.description = params[:item][:description]
-    @item.address = params[:item][:address]
+    @item.address = params[:item][:address]    
     @item.latlon = params[:item][:latlon]
     @item.save
     redirect_to guide_path(@item.guide)
