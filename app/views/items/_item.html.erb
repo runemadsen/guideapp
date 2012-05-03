@@ -9,7 +9,7 @@
 			The <%= (item_counter + 1).ordinalize %> place has not been added yet
 		</p>
 	<% end %>
-	<% if item.belongs_to?(current_user) %>
+	<% if item.belongs_to?(current_user) || (@guide.public_edit && user_signed_in?) %>
 		<%= link_to "Edit", edit_guide_item_path(@guide, item), :class => "btn edit-guide-link" %>
 	<% end %>
 </div>

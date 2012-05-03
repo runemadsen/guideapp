@@ -22,6 +22,12 @@
 		<span class="help-text">Say what this guide is about in less than <span id='countdown'></span> characters.</span>
 		<%= f.text_area :description %>
 		</p>
+		
+		<p class="spacing">
+		<%= f.label :public_edit, "Enable Public Edit" %>
+		<span class="help-text">If public edit is enabled, any user can add and edit this guide. This is great for asking questions to your friends about their favorite places.</span>
+		<%= f.check_box :public_edit %>
+		</p>
 	
 		<p class="spacing">
 		<%= f.submit "Create Guide", :class => "btn" %>

@@ -11,6 +11,7 @@ class GuidesController < ApplicationController
     @guide = current_user.guides.new
     @guide.title = params[:guide][:title]
     @guide.description = params[:guide][:description]
+    @guide.public_edit = params[:guide][:public_edit]
     @guide.save
     # create 6 empty items in guide
     @guide.items.create([{}, {}, {}, {}, {}, {}])
@@ -18,15 +19,16 @@ class GuidesController < ApplicationController
   end
   
   def update
-    @guide = current_user.guides.find(params[:id])
+    @guide = current_user.guide(params[:id])
     @guide.title = params[:guide][:title]
     @guide.description = params[:guide][:description]
+    @guide.public_edit = params[:guide][:public_edit]
     @guide.save
     redirect_to guide_path(@guide)
   end
   
   def edit
-    @guide = current_user.guides.find(params[:id])
+    @guide = current_user.guide(params[:id])
   end
   
   def show

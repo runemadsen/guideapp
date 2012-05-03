@@ -24,6 +24,16 @@
 			This is a personal guide that fits on a single printed page. <a href="#" onClick="window.print(); return false;">Print it</a>
 			</div>
 		<% end %>
+		<% if @guide.public_edit %>
+			<div id="public-edit">
+			This is guide can be edited by all users.
+			<% if user_signed_in? %>
+				Go ahead an add your opinion!
+			<% else %>
+				Sign in to add your opinion!
+			<% end %>
+			</div>
+		<% end %>
 		
 		<div class="clear"></div>
 	</div>

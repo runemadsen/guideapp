@@ -6,10 +6,10 @@ Guideapp::Application.routes.draw do
   
   match "/about" => "home#about"
   match "/admin" => "admin#index"
-  
-  root :to => 'home#index'
 
   devise_for :users
   
   resources :users, :only => [:show]
+  
+  root :to => 'home#index'
 end
